@@ -152,7 +152,7 @@
     url('/images/hero-spa-room.png');
 
   background-size: cover;            /* fills hero */
-  background-position: 75% center;   /* KEY: reduces zoom feel */
+  background-position: 55% center;   /* KEY: reduces zoom feel */
   background-repeat: no-repeat;
 
   overflow: hidden;
