@@ -142,24 +142,21 @@
 
   .hero {
   position: relative;
-  min-height: 78vh;
+  min-height: 92vh;
   display: flex;
   align-items: center;
   color: #fff;
-  background:
-    linear-gradient(rgba(52, 37, 27, 0.45), rgba(52, 37, 27, 0.45)),
-    url('/images/hero-spa-room.png') center center / contain no-repeat;
-  background-color: #7b6a5e;
-  overflow: hidden;
-}
 
-@media (max-width: 768px) {
-  .hero {
-    min-height: 62vh;
-    background-position: center center;
-    background-size: contain;
+  background-image:
+    linear-gradient(rgba(52, 37, 27, 0.45), rgba(52, 37, 27, 0.45)),
+    url('/images/hero-spa-room.png');
+
+  background-size: cover;            /* fills hero */
+  background-position: 75% center;   /* KEY: reduces zoom feel */
+  background-repeat: no-repeat;
+
+  overflow: hidden;
   }
-}
 
 .hero::after {
   content: "";
