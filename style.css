@@ -140,7 +140,7 @@
       font-weight: 800;
     }
 
-  ..hero {
+  .hero {
   position: relative;
   min-height: 78vh;
   display: flex;
