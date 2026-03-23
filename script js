@@ -1,0 +1,35 @@
+// Mobile menu toggle
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  // Close menu when clicking a link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+    });
+  });
+}
+
+// Set current year in footer
+const year = document.getElementById('year');
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
+
+// Booking form handler (safe fallback)
+const bookingForm = document.getElementById('bookingForm');
+
+if (bookingForm) {
+  bookingForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    alert('Form submitted. Hook this up to your backend or Formspree.');
+
+    bookingForm.reset();
+  });
+}
