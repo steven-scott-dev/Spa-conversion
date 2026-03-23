@@ -140,50 +140,58 @@
       font-weight: 800;
     }
 
-    .hero {
-      position: relative;
-      min-height: 92vh;
-      display: flex;
-      align-items: center;
-      color: #fff;
-      background:
-  linear-gradient(rgba(52, 37, 27, 0.48), rgba(52, 37, 27, 0.48)),
-  url('/images/hero-spa-room.png') center 30% / cover no-repeat;
-    }
+  .hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 0 0;
-      height: 140px;
-      background: linear-gradient(180deg, rgba(247,241,234,0), rgba(247,241,234,1));
-    }
+  /* split background into proper properties */
+  background-image:
+    linear-gradient(rgba(52, 37, 27, 0.5), rgba(52, 37, 27, 0.5)),
+    url('/images/hero-spa-room.jpg');
 
-    .hero-wrap {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 28px;
-      align-items: center;
-      width: 100%;
-      padding: 64px 0 84px;
-    }
+  background-size: cover;
+  background-position: right center; /* KEY FIX */
+  background-repeat: no-repeat;
 
-    h1 {
-      margin: 16px 0 16px;
-      font-size: clamp(2.6rem, 6vw, 5rem);
-      line-height: 0.98;
-      letter-spacing: -0.04em;
-      max-width: 12ch;
-    }
+  overflow: hidden;
+}
 
-    .hero-copy p {
-      font-size: 1.08rem;
-      max-width: 58ch;
-      color: rgba(255,255,255,0.92);
-      margin: 0 0 24px;
-    }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 140px;
+  background: linear-gradient(180deg, rgba(247,241,234,0), rgba(247,241,234,1));
+}
+
+.hero-wrap {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+  width: 100%;
+  padding: 64px 0 84px;
+}
+
+h1 {
+  margin: 16px 0 16px;
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  max-width: 12ch;
+}
+
+.hero-copy p {
+  font-size: 1.08rem;
+  max-width: 58ch;
+  color: rgba(255,255,255,0.92);
+  margin: 0 0 24px;
+}
 
     .cta-row {
       display: flex;
