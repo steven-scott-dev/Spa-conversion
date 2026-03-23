@@ -147,9 +147,8 @@
       align-items: center;
       color: #fff;
       background:
-        linear-gradient(rgba(52, 37, 27, 0.48), rgba(52, 37, 27, 0.48)),
-        url('/images/hero-spa-room.png') center/cover no-repeat;
-      overflow: hidden;
+  linear-gradient(rgba(52, 37, 27, 0.48), rgba(52, 37, 27, 0.48)),
+  url('/images/hero-spa-room.png') center 30% / cover no-repeat;
     }
 
     .hero::after {
